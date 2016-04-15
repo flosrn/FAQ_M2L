@@ -39,7 +39,7 @@ session_start();
         $con = new PDO($dsn, 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
         //Requête SQL pour rechercher les mots dans la base
-        $sql = "select id_faq, question, reponse, pseudo 
+        $sql = "select id_faq, id_ligue, question, reponse, pseudo 
         from faq 
         join user on faq.id_user = user.id_user 
         where question like '%" . $_POST['recherche'] . "%'
@@ -91,7 +91,7 @@ session_start();
         $con = new PDO($dsn, 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
         //Requête SQL pour rechercher les mots dans la base
-        $sql = "select id_faq, question, reponse, pseudo 
+        $sql = "select id_faq, id_ligue, question, reponse, pseudo 
         from faq 
         join user on faq.id_user = user.id_user 
         where question like '%" . $_POST['recherche'] . "%'
@@ -141,7 +141,7 @@ session_start();
           $con = new PDO($dsn, 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
           //Requête SQL pour rechercher les mots dans la base
-          $sql = "select id_faq, question, reponse, pseudo 
+          $sql = "select id_faq, id_ligue, question, reponse, pseudo 
           from faq 
           join user on faq.id_user = user.id_user 
           where question like '%" . $_POST['recherche'] . "%'

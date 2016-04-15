@@ -6,17 +6,17 @@ $questionok = "";
 if (isset($_SESSION['pseudo'])) {
   if(isset($_POST['submit'])) {
     $question = $_POST['question'];
-    $reponse = $_POST['reponse'];
+    //$reponse = $_POST['reponse'];
 
     $dsn = 'mysql:host=localhost;dbname=m2l v2.0'; //Ou se situe la bdd
     $con = new PDO($dsn,'root','',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     $question = $con->quote($question);
-    $reponse = $con->quote($reponse);
+    //$reponse = $con->quote($reponse);
 
 
-    $sql = "insert into faq(question, reponse, dat_question, id_user) 
-    values ($question, $reponse, SYSDATE(), ".$_SESSION['id_user'].")";
+    $sql = "insert into faq(question, dat_question, id_user) 
+    values ($question, SYSDATE(), ".$_SESSION['id_user'].")";
 
     try 
     {
@@ -58,10 +58,8 @@ else {
          <label for="question"><strong>Question :</strong></label><br \>  <!--Champs de texte "Question"-->
          <textarea name="question" id="question" rows="10" cols="50" required></textarea>       
        </div>
-       <div id="q2">
-        <label for="reponse"><strong>Reponse :</strong></label><br \>     <!--Champs de texte "Réponse"-->
-        <textarea name="reponse" id="reponse" rows="10" cols="50"></textarea>       
-      </div>
+       
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <input type="submit" value="Ajouter" name="submit" /> <!--Bouton envoyer-->
     </form><br />
 
