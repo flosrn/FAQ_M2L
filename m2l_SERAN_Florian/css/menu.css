@@ -1,0 +1,41 @@
+#menu {
+	width: 150px;
+	height: 760px;
+	margin-left: 5%;
+	margin-top: 0%;
+	padding-right: 10px;
+	padding-left: 0px;
+	background: #c00;
+  position: absolute;	
+}
+
+#menu1 {
+	list-style: none; 
+	margin: 0;
+	padding: 4px;
+}
+
+#menu1 li {
+	height: 50px;
+	background: #c00 ;
+  color: #fff ;
+  border-top: 1px solid black; 
+  margin-bottom: 1px ;
+  padding-top: 10%;
+}
+
+#menu1 li a {
+  display: block ;
+  background: #c00 ;
+  color: #fff ;
+  font: 1em "Trebuchet MS",Arial,sans-serif ;
+  line-height: 1em ;
+  text-align: center ;
+  text-decoration: none ;
+  padding: 4px 0 ;
+}
+
+#menu1 li a:hover, #menu1 li a:focus, #menu1 li a:active {
+  background: #900 ;
+  text-decoration: underline ;
+}
